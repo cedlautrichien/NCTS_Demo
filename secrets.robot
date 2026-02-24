@@ -1,0 +1,3 @@
+*** Variables ***
+${USERNAME}    your_username_here
+${PASSWORD}    your_password_here

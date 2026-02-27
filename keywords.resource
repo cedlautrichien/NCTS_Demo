@@ -4,12 +4,16 @@ Library    Collections
 Library    OperatingSystem
 Library    String
 Library    DateTime
-Resource   secrets.robot
 
 *** Variables ***
 ${LRNPREFIX}    CM
 
 *** Keywords ***
+Get credentials
+    [Arguments]    ${username}    ${password}
+    Should Not Be Empty    ${username}
+    Should Not Be Empty    ${password}
+
 Test connection with CTW-in
     ${xml_template}     Get File    ${CURDIR}/Templates/testCTW.xml
     ${soap_body}=   Replace String    ${xml_template}    USERNAME    ${USERNAME}

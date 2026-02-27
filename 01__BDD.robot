@@ -4,13 +4,15 @@ Library    Collections
 Library    OperatingSystem
 Library    String
 Library    DateTime
-Resource   secrets.robot
-Resource   keywords.resource
-    
+Resource   keywords.resource 
+
 *** Test Cases ***
+Prepare test environment
+    [Tags]    setup
+    Get credentials    ${USERNAME}    ${PASSWORD}
+
 Check connection with CTW
     [Tags]    connectivity
-    # Check if CTW is online
     Test connection with CTW-in
     Test connection with CTW-out
 

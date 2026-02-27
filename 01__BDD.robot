@@ -16,8 +16,14 @@ Check connection with CTW
     Test connection with CTW-in
     Test connection with CTW-out
 
-Send 015C declarations to CTW-in
+Send normal declaration
     [Tags]    acceptance
     Send one normal CC015C message and receive one CC928C message
-    Send one invalid CC015C message and receive one CC056C message
+
+Send simplified declaration
+    [Tags]    acceptance
     Send one simplified CC015C message and receive simultaneously one CC928C message and one CC028C message
+
+Send invalid declaration
+    [Tags]    acceptance
+    Send one invalid CC015C message and receive one CC056C message

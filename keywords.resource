@@ -52,7 +52,7 @@ Send one ${015C_type} message and receive one ${msg_type} message
     ${response}    ctw_in   body=${soap_body}
     Should Be Equal As Strings    ${response.status_code}    200
     Log    ${response.content}   
-    Sleep    30s
+    Sleep    15s
     ${xml_template}     Get File    ${CURDIR}/Templates/ctwOut.xml
     ${soap_body}   Replace String    ${xml_template}    USERNAME    ${USERNAME}
     ${soap_body}   Replace String    ${soap_body}    PASSWORD    ${PASSWORD}
